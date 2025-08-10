@@ -3,9 +3,10 @@
 This repository implements a system for **detecting, tracking, and counting cars** from a **top-view perspective** using [YOLOv5](https://github.com/ultralytics/yolov5) for object detection and [Deep SORT](https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch) for multi-object tracking.
 
 <div align="center">
-<p>
-<img src="eval/input.gif" width="400"/> <img src="eval/output.gif" width="400"/> 
-</p>
+ <p>
+  <img src="eval/input.gif" width="400"/> <img src="eval/output.gif" width="400"/> 
+ </p>
+</div>
 
 ---
 
@@ -14,15 +15,15 @@ This repository implements a system for **detecting, tracking, and counting cars
 This project combines **YOLOv5 detection** with **Deep SORT tracking** to count cars in real time from aerial or surveillance footage.
 
 - **Dataset preparation**  
- - Labeled over **300 top-view car images** using [Roboflow](https://roboflow.com/).  
- - Applied **data augmentation** to expand the dataset to **3,000+ images** for training.  
+  - Labeled over **300 top-view car images** using [Roboflow](https://roboflow.com/).  
+  - Applied **data augmentation** to expand the dataset to **3,000+ images** for training.  
 
 - **Detection**  
- - YOLOv5 was trained on the augmented dataset to detect cars from a top-down perspective.
+  - YOLOv5 was trained on the augmented dataset to detect cars from a top-down perspective.
 
 - **Tracking**  
- - Implemented **Deep SORT**, which uses the **Kalman Filter** for robust multi-object tracking.  
- - Stored unique object IDs of detected cars and used the list length to count total cars.
+  - Implemented **Deep SORT**, which uses the **Kalman Filter** for robust multi-object tracking.  
+  - Stored unique object IDs of detected cars and used the list length to count total cars.
 
 ---
 
